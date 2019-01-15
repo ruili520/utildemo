@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>工具包测试案例</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+    <script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<h3>身份证验证输入框，此处只做简单TRUE或者FALSE的返回值</h3>
+<p>业务逻辑中，根据实际情况来修改相应判断结果</p>
+<form th:action="@{/checkIdcard}" id="iform"  th:method="post">
+  <div th:class="row">
+      <div class="col-lg-6">
+          <div class="input-group">
+              <input th:class="form-control" type="text"  name="idNum" id="idNum" placeholder="请输入身份证号码"/>
+              <span class="input-group-btn">
+                <input class="btn btn-default" type="submit" value="验证身份证!"/>
+              </span>
+          </div>
+      </div>
+  </div>
+</form>
+</body>
+</html>
